@@ -12,6 +12,11 @@ pipeline {
                 sh 'mvn test'
             }
         }
+        stage('Junit Reports'){
+            steps{
+                junit 'target/surfire-reports/*.xml'
+            }
+        }
         
     }
         post{
