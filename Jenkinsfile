@@ -7,19 +7,19 @@ pipeline {
                 sh 'mvn compile'
             }
         }
-        stage('Test'){
+        // stage('Test'){
+        //     steps{
+        //         sh 'mvn test'
+        //     }
+        // }
+        stage('Package'){
             steps{
-                sh 'mvn test'
+                sh 'mvn package'
             }
         }
         stage('Junit Reports'){
             steps{
                 junit 'target/surefire-reports/*.xml'
-            }
-        }
-        stage('Package'){
-            steps{
-                sh 'mvn package -DskipTests'
             }
         }
         stage('Artifact'){
