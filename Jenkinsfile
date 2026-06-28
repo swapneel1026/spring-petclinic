@@ -31,7 +31,7 @@ pipeline {
     }
         post{
             always{
-                echo 'Pipeline ran succesfully'
+                echo 'Pipeline ran succesfully... Congratulations'
             }
         }
 }
