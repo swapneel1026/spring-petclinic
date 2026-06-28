@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Junit Reports'){
             steps{
-                junit 'target/surfire-reports/*.xml'
+                junit 'target/surefire-reports/*.xml'
             }
         }
         
